@@ -1,0 +1,131 @@
+:root {
+  --ink: #e8e0d0;
+  --dim: #b8ac92;
+  --gold: #f4d67a;
+  --panel: #1c1626;
+  --panel-edge: #3a2f4a;
+  --accent: #7de8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(1200px 500px at 50% -10%, #2b2340 0%, #14101d 55%);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 14px 16px 8px;
+}
+
+.hud-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+}
+
+.hud-logo {
+  font-size: 22px;
+}
+
+.hud-center {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.hud-sep {
+  margin: 0 8px;
+  color: var(--dim);
+}
+
+#hud-found {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hud-chip {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.hud button {
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+.hud button:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.hud button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.stage {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  outline: none;
+  cursor: crosshair;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+#game:focus-visible {
+  box-shadow: 0 0 0 3px var(--accent), 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+.help {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 10px 16px 20px;
+  color: var(--dim);
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.help strong {
+  color: var(--ink);
+}

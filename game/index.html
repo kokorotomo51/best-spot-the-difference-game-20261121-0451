@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot the Oddity — A Midnight Museum Mystery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hud">
+  <div class="hud-brand">
+    <span class="hud-logo">◉</span>
+    <span class="hud-name">Spot the Oddity</span>
+  </div>
+  <div class="hud-center">
+    <span id="hud-round">The Midnight Museum · Round 1 of 3</span>
+    <span class="hud-sep">·</span>
+    <span id="hud-found">0 of 7 found</span>
+  </div>
+  <div class="hud-right">
+    <span class="hud-chip">⏱ <span id="hud-timer">0:00</span></span>
+    <span class="hud-chip">★ <span id="hud-score">0</span></span>
+    <span class="hud-chip">💡 <span id="hud-hints">3 hints</span></span>
+    <button id="btn-hint" type="button">Hint (H)</button>
+    <button id="btn-restart" type="button">Restart</button>
+    <button id="btn-sound" type="button">Sound: on</button>
+  </div>
+</header>
+<main class="stage">
+  <canvas id="game" width="1200" height="500" tabindex="0" role="img"
+    aria-label="Spot the difference game: two near-identical museum scenes side by side. Click a difference, or use the arrow keys and Enter."></canvas>
+</main>
+<footer class="help">
+  <p><strong>How to play:</strong> find <strong>7 differences</strong> in each of the 3 rooms. Click directly on a
+  difference, or move the glowing crosshair with the <strong>arrow keys</strong> and press
+  <strong>Enter</strong> to mark it. <strong>H</strong> uses a hint, <strong>M</strong> toggles sound. A wrong mark
+  costs 25 points and 5 seconds — look closely before you click.</p>
+</footer>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
